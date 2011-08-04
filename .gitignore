@@ -1,3 +1,4 @@
 core
 .htaccess
 config.local.php
+config.php

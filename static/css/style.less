@@ -1,0 +1,211 @@
+/*
+Theme Name: Melt sample app
+Description: A neat template for your Melt projects. Built with LESS css, for more information visit http://lesscss.org/ . Inspired by http://www.elmastudio.de
+
+Author: Daniel Marklund
+Author URI: http://www.danielmarklund.se
+Version: 1.0
+
+License: BSD License
+License URI: http://meltframework.org/license
+
+*/
+
+
+/* LESS Variables & Styles
+----------------------------------*/
+
+@bg-color: #ececec;
+@font-color: #777;
+@header-color: #0099cc;
+@the-border: 1px solid #DDDDDD;
+
+.drop-shadow {
+    -moz-box-shadow: 2px 2px 5px #ccc;
+    -webkit-box-shadow: 2px 2px 5px #ccc;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+.selection {
+    ::selection {background-color: @header-color; color: #fff;}
+    ::-moz-selection {background-color: @header-color; color: #fff;}
+    ::-webkit-selection {background-color: @header-color; color: #fff;}
+}
+
+
+/* Structure
+----------------------------------*/
+
+
+body {
+    background-color: @bg-color;
+    text-align: center;
+    .selection;
+}
+
+#wrapper {
+    background-color: #fff;
+    margin: 30px auto;
+    overflow: hidden; /* Make sures floating content stays in the wrapper */
+    padding: 30px;
+    text-align: left;
+    width: 900px;
+    .drop-shadow;
+}
+
+#header {
+    width: 100%;
+    clear: both;
+}
+
+    #header img {
+        margin: 0 0 20px;
+    }
+
+#menu {
+    border-top: @the-border;
+    border-bottom: @the-border;
+    clear: both;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+#main {
+    border-top: @the-border;
+    float: left;
+    margin-top: 15px;
+    padding-top: 10px;
+    width: 620px;
+}
+
+#sidebar {
+    background-color: @bg-color;
+    border-top: @the-border;
+    border-bottom: @the-border;
+    clear: right;
+    float: left;
+    margin: 15px 0 0 20px;
+    padding: 15px 15px;
+    width: 230px;
+
+}
+
+
+/* Typography
+----------------------------------*/
+
+body {	
+    font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+    font-size: 62.5%; /* Setting 1 em to 10 px for easy converting */
+}
+
+#main, #sidebar {
+    font-size: 1.4em;
+    line-height: 1.6em;
+    color: @font-color;
+}
+
+h1 {}
+
+    #header h1 {
+        color: @header-color;
+        float: left;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0 10px 10px 0;
+        text-transform: uppercase;
+    }
+
+h2 {}
+
+    #header h2#site-description {
+        color: @font-color;
+        font-size: 18px;
+        margin: 11px 0 0;
+        vertical-align: bottom;
+        float: left;
+    }
+
+    #main h2, #sidebar h2 {
+        color: @header-color;
+        letter-spacing: -1px;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+
+#main h1,h3,h4,h5 {
+    color: @header-color;
+    margin: 15px 0;
+}
+    
+p {}
+    
+    #main p, #sidebar p {
+        margin: 15px 0 0;
+    }
+
+
+/* Menu and navigation
+----------------------------------*/
+
+#menu ul {
+    float: left;
+
+    li {
+        display: inline;
+        float: left;
+
+        a {
+            color: @header-color;
+            font-size: 16px;
+            display: block;
+            font-weight: bold;
+            margin-right: 7px;
+            padding: 2px 2px 2px 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+}
+
+/* Links
+----------------------------------*/
+
+a:link, a:visited {
+    color: @header-color;
+    text-decoration: none;
+}
+a:hover,a:active {
+    color: @font-color;
+    text-decoration: underline;
+}
+
+#main a::after {
+    content: " →";
+}
+
+
+/* Forms
+----------------------------------*/
+
+/* Other
+----------------------------------*/
+.clear {clear: both;}
+
+strong {font-weight: bold;}
+em {font-style:italic;}
+
+
+
+
+/*
+    Bring the cold, cold water,
+    from the dark, dark well,
+    to the warm hearth fire,
+    when the ice begins to melt.
+*/
