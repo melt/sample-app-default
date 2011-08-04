@@ -38,12 +38,12 @@ abstract class AppController extends Controller {
      * @return array $path_tokens Path to rewrite to.
      */
     public static function rewriteRequest($path_tokens) {
-        if($path_tokens[0]==""){
-            return array("pages","");
-        } elseif (method_exists("melt\PagesController", $path_tokens[0])){
-            array_unshift($path_tokens,"pages");
+        if ($path_tokens[0] == "") {
+            return array("pages", "");
+        } else if (method_exists("melt\PagesController", $path_tokens[0])) {
+            array_unshift($path_tokens, "pages");
             return $path_tokens;
-        } elseif($path_tokens[0]=="pages"){
+        } else if ($path_tokens[0] === "pages") {
             return false;
         }
     }
