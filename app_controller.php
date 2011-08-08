@@ -2,7 +2,7 @@
 
 /** Application specific controller. */
 abstract class AppController extends Controller {
-    // The layout your controllers use by default.
+    // The layout your controllers use by default. Set to /html/html5 for the standard layout.
     public $layout = "/layout";
 
     /**
