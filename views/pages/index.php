@@ -11,6 +11,7 @@
     <li>Example structure of static content in subfolders located in <strong>/static/</strong></li>
     <li>URL rewriting for controllers using <strong>rewriteRequest()</strong> set in <strong>app_controller.php</strong></li>
     <li>Example menu using <strong>generate_ul_navigation()</strong> set in <strong>/controllers/pages_controller.php</strong></li>
+    <li>Example form using <strong>UserInterfaceProvider</strong> with custom interface callback and volatile data types</li>
 </ul>
 
 <p>
