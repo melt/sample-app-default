@@ -13,12 +13,6 @@
     <li>Example menu using <strong>generate_ul_navigation()</strong> set in <strong>/controllers/pages_controller.php</strong></li>
     <li>Example form using <strong>UserInterfaceProvider</strong> with custom interface callback and volatile data types</li>
 </ul>
-
-<p>
-    
-</p>
-
-
 <p>
     Edit <strong>/views/pages/index.php</strong> to change this text. 
     <a href="https://github.com/melt/melt/wiki" title="Learn more about the Melt Framework">Read the Documentation</a>

@@ -17,6 +17,7 @@ License URI: http://meltframework.org/license
 
 @bg-color: #ececec;
 @font-color: #777;
+@font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
 @header-color: #0099cc;
 @the-border: 1px solid #DDDDDD;
 
@@ -103,7 +104,7 @@ body {
 ----------------------------------*/
 
 body {	
-    font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+    font-family: @font-family;
     font-size: 62.5%; /* Setting 1 em to 10 px for easy converting */
 }
 
@@ -187,14 +188,35 @@ p {}
 }
 
 #social-media a {
-margin-left: 10px;
-height: 30px;
-background-color: @bg-color; 
-display: inline-block;
-&:hover {background-color: @header-color;}
+    margin-left: 10px;
+    height: 30px;
+    background-color: @bg-color; 
+    display: inline-block;
+    &:hover {background-color: @header-color;}
 }
 
+/* Lists
+----------------------------------*/
 
+#main ul {
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:disc;
+    margin: 15px 0;
+    li {
+        margin:3px 0 3px 20px;
+    }
+}
+
+#main ol {
+margin: 15px 0;
+    li {
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:decimal;
+        margin:3px 0 3px 20px;
+    }
+}
 
 /* Links
 ----------------------------------*/
@@ -215,6 +237,51 @@ a:hover,a:active {
 
 /* Forms
 ----------------------------------*/
+
+input[type=text],textarea {
+    font-family: @font-family;
+    border: @font-color 1px solid;
+    width: 260px;
+    font-size: 14px;
+    padding: 4px 2px;
+}
+
+label {
+    color: @header-color;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    background: #999 url(../images/gradient.png) repeat-x 0 -40px!important;
+    border: solid 1px #666;
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 8px;
+    margin: 15px 0;
+    text-shadow: 0 1px 0 rgba(255,255,255, 1);
+    text-decoration: none;
+    line-height: 20px;
+    &:hover {
+        background: #999 url(../images/gradient.png) repeat-x 0 -20px!important;
+        color: #000;
+    }   
+}
+
+.qmi_component {
+    position: relative;
+}
+.qmi_error {
+    color: #990000;
+    position: absolute;
+    top: 25px;
+    left: 280px;
+}
+
+.c_name {
+    width: 280px;
+}
 
 /* Other
 ----------------------------------*/
